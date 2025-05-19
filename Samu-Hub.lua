@@ -14,17 +14,37 @@ local support = {
 if support[exploit()]  then
     print("Correct Executor Let's Run uwu")
 else
- game.Players.LocalPlayer:Kick("Ko Hỗ Trợ Executor | Not Support Executor | Tidak Mendukung Pelaksana | support fluxus,hydrogen,alysse,trigon,vegaX")
+ game.Players.LocalPlayer:Kick("Ko Hỗ Trợ Executor | Not Support Executor | Executor não suportado | Tidak Mendukung Pelaksana | support fluxus,hydrogen,alysse,trigon,vegaX")
  end
 
-local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or secure_load and "Sentinel" or KRNL_LOADED and "Krnl" or SONA_LOADED and "Sona" or "Fluxus" or
-"Fluxus"
+local ExecutorUsing = 
+    is_sirhurt_closure and "Sirhurt"
+    or pebc_execute and "ProtoSmasher"
+    or syn and "Synapse X"
+    or secure_load and "Sentinel"
+    or KRNL_LOADED and "Krnl"
+    or SONA_LOADED and "Sona"
+    or (getexecutorname and ({
+        ["Fluxus"] = "Fluxus",
+        ["Delta"] = "Delta",
+        ["Hydrogen"] = "Hydrogen",
+        ["Trigon"] = "Trigon",
+        ["Vega X"] = "Vega X",
+        ["Alysse"] = "Alysse",
+        ["ArceusX"] = "ArceusX",
+        ["Electron"] = "Electron",
+        ["Codex"] = "Codex"
+    })[getexecutorname()])
+    or "Desconhecido"
+
+print("Executor detectado: " .. ExecutorUsing)
+
                     local HttpService = game:GetService("HttpService")
                      local Data =
                         {
                             ["embeds"]= {
                                 {
-                                    ["title"]= "𝙥𝙡𝙖𝙮𝙚𝙧𝙨 𝙥𝙧𝙤𝙛𝙞𝙡𝙚💻";
+                                    ["title"]= "Perfil do jogador💻";
                                     ["url"]= "https://www.roblox.com/users/"..game.Players.LocalPlayer.UserId;
                                     ["description"]= "||```"..game.Players.LocalPlayer.DisplayName.." ("..game.Players.LocalPlayer.Name..")```||";
                                     ["color"]= tonumber(0x7269da);
@@ -32,22 +52,22 @@ local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "Prot
 
                                     ["fields"]= {
                                         {
-                                            ["name"]= "𝙀𝙭𝙚𝙘𝙪𝙩𝙤𝙧📑",
+                                            ["name"]= "Executor 📑",
                                             ["value"]= "```"..ExecutorUsing.."```",
                                             ["inline"]= true
                                         },
                                         {
-                                            ["name"]= "𝘼𝙜𝙚🗓",
+                                            ["name"]= "Idade da conta 🗓",
                                             ["value"]= "```"..game.Players.LocalPlayer.AccountAge.." Day```",
                                             ["inline"]= true
                                         },
                                         {
-                                            ["name"]= "𝙎𝙘𝙧𝙞𝙥𝙩 𝙎𝙩𝙖𝙩𝙪𝙨ℹ️",
-                                            ["value"]= "```Người dùng đã chạy script Nome Do Seu Hub Auto Farm Cảm Ơn Vì Đã Dùng RinX!!!!```",
+                                            ["name"]= "Status do script ℹ️",
+                                            ["value"]= "```Người dùng đã chạy script SAMU HUB Auto Farm, Cảm Ơn Vì Đã Dùng SAMU HUB!!!! | O usuário executou o script SAMU HUB Auto Farm, Obrigado por usar o SAMU HUB!!!!```",
                                             ["inline"]= true
                                             },
                                        {
-                                     ["name"] = "𝙅𝙤𝙗 𝙄𝙙",
+                                     ["name"] = "ID da partida",
                                      ["value"]= '```game:GetService("TeleportService"):TeleportToPlaceInstance('..game.PlaceId..', "'..game.JobId..'", game.Players.LocalPlayer)```',
                                      ["inline"]= true
                                     },
@@ -62,7 +82,7 @@ local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "Prot
                     local Encoded = HttpService:JSONEncode(Data)
 
                     Request = http_request or request or HttpPost or syn.request
-                    local Final = {Url = "https://discord.com/api/webhooks/1203612065302970389/GHxtX7Y_Pdy2lQbZPo91hEfvXRagarlM5OYjAFy7NiaVFKLbbZuRpDl-SX3w3y6Cv24W", Body = Encoded, Method = "POST", Headers = Headers}
+                    local Final = {Url = "https://discord.gg/DTsFfjswEe", Body = Encoded, Method = "POST", Headers = Headers}
                     Request(Final)
 
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
